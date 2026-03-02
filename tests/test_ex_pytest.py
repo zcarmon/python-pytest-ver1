@@ -9,7 +9,7 @@ def test_example4():
 def test_substr():
     a = "asas"
     b = "asas"
-    assert_that(a). contains(b)
+    assert_that(a).contains(b)
 
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError) as e:
@@ -28,3 +28,10 @@ def load_params_from_json():
 def test_add(x,y,result):
     assert x + y == result
     assert_that(x + y).is_equal_to(result)
+
+@pytest.fixture
+def gen_data():
+    return {"name":"pytest","version":"7.1"}
+
+def test_gen_data(gen_data):
+    assert gen_data["name"] == "pytest"

@@ -1,0 +1,12 @@
+[
+  {
+    "price": 100,
+    "discount": 20,
+    "result": 80
+  },
+  {
+    "price": 200,
+    "discount": 10,
+    "result": 180
+  }
+]
